@@ -1,9 +1,11 @@
 import Weather from "./models/weather.js";
 
 let _state = {
+  image: {},
+  quote: {},
   /**@type {Weather} */
   weather: new Weather({ name: "loading", main: { temp: 0.0 } }), //temporary fake data
-  /**@type {any[]}*/
+  /**@type {Todo[]}*/
   todos: [] //TODO change 'any' to your todo model
 };
 
@@ -11,7 +13,10 @@ let _state = {
  * @type {{[x:string]: function[]}}
  */
 let _listeners = {
-  weather: []
+  weather: [],
+  image: [],
+  todos: [],
+  quote: []
 };
 
 /**

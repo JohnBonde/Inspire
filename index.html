@@ -5,26 +5,48 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Inspire</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<title>Inspire</title>
 </head>
 
-<body id="bg-image">
-	<div id="weather">
-		Your Weather Template
-	</div>
+<body>
+	<header class="container-fluid">
+		<div class="row">
+			<div class="col" id="weather">
+			</div>
+		</div>
+	</header>
+	<main class="container-fluid">
+		<div class="row">
+			<div class="col">
 
-	<div id="quote">
-		The Quote
-	</div>
+			</div>
+		</div>
+		<footer class="container-fluid fixed-bottom">
+			<div class="row">
+				<div class="col-4">
+				</div>
+				<div class="col-4" id="quote">
 
-	<div>
-		A Todo List
-		<div id="todo-error"></div>
-		<form onsubmit=""></form>
-		<div id="todos"></div>
-	</div>
-
+				</div>
+				<div class="col-4">
+					<div class="card" style="width: 18rem;">
+						<div class="card-body bg-secondary">
+							<h5 class="card-title">Card title</h5>
+							<form class="form-group" onsubmit="app.todoController.addTodo(event, '${this._id}')">
+								<input type="text" id="item" class="form-control" placeholder="Enter Task" required>
+								<button type="submit" class="btn btn-primary mt-2">Add</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</main>
+	<script src="https://kit.fontawesome.com/0ad8689426.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script type="module" src="app/main.js"></script>
 </body>
