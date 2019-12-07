@@ -34,10 +34,11 @@
 				</div>
 				<div class="col-4">
 					<div class="card" style="width: 18rem;">
-						<div class="card-body bg-secondary">
+						<div class="card-body rounded bg-secondary">
 							<h5 class="card-title">Todos</h5>
-							<form class="form-group" onsubmit="app.todoController.addTodo(event, '${this._id}')">
-								<input type="text" id="item" class="form-control" placeholder="Enter Task" required>
+							<form class="form-group" onsubmit="app.todoController.addTodoAsync(event)">
+								<input type="text" name="description" class="form-control" placeholder="Enter Task" required>
+								<div id="todo"></div>
 								<button type="submit" class="btn btn-primary mt-2">Add</button>
 							</form>
 						</div>

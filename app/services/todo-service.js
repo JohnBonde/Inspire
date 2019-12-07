@@ -8,7 +8,7 @@ const todoApi = axios.create({
 });
 
 class TodoService {
-  async getTodos() {
+  async getTodosAsync() {
     console.log("Getting the Todo List");
     let res = await todoApi.get();
     store.commit("todos", res.data.data.map(t => new Todo(t)))
@@ -19,7 +19,7 @@ class TodoService {
 
   async addTodoAsync(todo) {
     let res = await todoApi.post("", todo);
-    this.getTodos()
+    this.getTodosAsync()
 
     //TODO Handle this response from the server (hint: what data comes back, do you want this?)
   }
@@ -38,6 +38,8 @@ class TodoService {
     //TODO Work through this one on your own
     //		what is the request type
     //		once the response comes back, what do you need to insure happens?
+    await todoApi.delete(todoId)
+    this.getTodosAsync()
   }
 }
 
