@@ -6,7 +6,7 @@ body {
 }
 footer {
   color: white;
-  text-shadow: 2px 2px black;
+  text-shadow: 1px 1px black;
 }
 #todo-error{
   color: red;
@@ -28,6 +28,10 @@ footer {
 .grid-item {
   float: right;
 }
+.card {
+  border: none;
+}
 .card-body {
   border: none;
+  border-radius: 10px;
 }
