@@ -25,6 +25,10 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+#card {
+  display: flex;
+  justify-content: flex-end;
+}
 .card {
   border: none;
 }
