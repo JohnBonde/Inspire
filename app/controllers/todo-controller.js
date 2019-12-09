@@ -5,8 +5,21 @@ import store from "../store.js";
 function _drawTodos() {
   let template = ''
   let todo = store.State.todos
+  let count = todo.length
+  for (let i = 0; i < todo.length; i++) {
+    if (todo[i].completed == true) {
+      count--
+    }
+
+  }
   todo.forEach(t => template += t.Template)
   document.getElementById('todo').innerHTML = template
+  if (count == 1) {
+    document.getElementById('title').innerHTML = count + ` thing Todo`
+  }
+  else {
+    document.getElementById('title').innerHTML = count + ` things Todo`
+  }
 }
 
 export default class TodoController {

@@ -27,8 +27,15 @@ footer {
 }
 #card {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+}
+#todo {
+  overflow-y: auto;
 }
 .card {
   border: none;
+  height: 400px;
 }
+
+

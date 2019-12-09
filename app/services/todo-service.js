@@ -29,8 +29,15 @@ class TodoService {
     //TODO Make sure that you found a todo,
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
-
+    if (todo.completed == true) {
+      todo.completed = false
+    } else {
+      todo.completed = true
+    }
     let res = await todoApi.put(todoId, todo);
+    this.getTodosAsync()
+    console.log(res);
+
     //TODO do you care about this data? or should you go get something else?
   }
 
